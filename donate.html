@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/donate.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+        <title>Nome do jogo?</title>
+    </head>
+    <body>
+
+        
+        <div class="linha"></div>
+        <div class="bloco">
+            <h1 style="font-family: 'Russo One', sans-serif;">Ajude o projeto a crescer!</h1><br><br>
+            <form action="#">
+                <h2 style="float: left;">R$</h2>
+                <input type="number"  id="valor" class="campo_txt" style="margin-bottom: 10px"><br>
+                <button onclick="document.getElementById('valor').value = '5'" class="botoes">R$5</button>    
+                <button onclick="document.getElementById('valor').value = '10'" class="botoes">R$10</button>
+                <button onclick="document.getElementById('valor').value = '20'" class="botoes">R$20</button>
+                <button onclick="document.getElementById('valor').value = '40'" class="botoes">R$40</button><br>
+                <p>*Não se sinta limitado pelos valores. Doe quanto quiser!</p>
+                <input type="submit" value="Fazer boa ação" class="entrar" style="font-family: 'Russo One', sans-serif;"><br>
+                <p id="txt_bt" onclick="aparecer()" style="float: left">Para onde vai o dinheiro?</p><br>
+                <p id="txt" style="display: none;">*Todos os lucros com as doações são direcionadas para o desenvolvimento da versão final do Folk Fighter em Game Engine dedicada.</p>
+            </form>
+        </div>
+        <script>
+            if(document.getElementById('valor').value == ""){
+                document.getElementById('valor').value = "20";
+            }
+            function aparecer(){
+                
+                var txt = document.getElementById('txt');
+                var txt_2 = txt.style.display;
+                if(txt_2 == "none"){
+                    txt = txt.style.display = "block";
+                }else if(txt_2 == "block"){
+                    txt = txt.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>
